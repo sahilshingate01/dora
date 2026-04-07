@@ -1826,7 +1826,7 @@ impl Daemon {
         node_id: NodeId,
         outputs: Vec<DataId>,
     ) -> eyre::Result<()> {
-        let (local_node_inputs, closed) = {
+        let (_local_node_inputs, closed) = {
             let mut dataflow = self
                 .state
                 .running
